@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to my Portfolio — Aarushi Mittal{% endblock %}
+
+{% block description %}Portfolio of Aarushi Mittal — MSIS + BSIS student at Indiana University Kelley School of Business. Tech consulting, analytics, and digital transformation.{% endblock %}
+
+{% block content %}
+<!-- Hero section with professional design -->
+<section class="hero-professional">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>MSIS + BSIS Student</span>
+      </div>
+      <h1 class="hero-title">Aarushi Mittal</h1>
+      <p class="hero-subtitle">Data Analytics Professional | Tech Consultant | Digital Transformation Specialist</p>
+      <p class="hero-description">
+        Welcome to my portfolio. I specialize in transforming complex data into actionable insights and designing streamlined systems that enhance decision-making. Currently pursuing advanced studies in Information Systems at Indiana University's Kelley School of Business.
+      </p>
+      <p> My experience spans analytics, automation, and design. I've built dashboards using Tableau and Sigma, automated with UiPath, and enhanced CRM interfaces to improve engagement. I'm passionate about bridging technology and business strategy to create scalable, data-driven solutions with measurable impact.</p>
+      
+      <!-- Professional stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-content">
+            <span class="stat-number">3.95</span>
+            <span class="stat-label">Major GPA</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-content">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Internships</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-content">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Projects</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-content">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Degrees</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-image">
+      <div class="image-container">
+        <img class="portrait" src="{{ url_for('static', filename='images/headshot.png') }}" alt="Portrait of Aarushi Mittal" />
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

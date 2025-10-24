@@ -1,53 +1,29 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Resume — Aarushi Mittal</title>
-    <meta name="description" content="Resume of Aarushi Mittal — Education, experience, skills, and focus areas." />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
+{% extends "base.html" %}
 
-  <body>
-    <header class="site-header">
-      <div class="container nav" role="navigation" aria-label="Primary">
-        <div class="brand">
-          <span class="dot" aria-hidden="true"></span>
-          <a href="index.html">Aarushi Mittal</a>
-        </div>
-        <nav aria-label="Main Navigation">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resume.html" aria-current="page">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="https://github.com/aarumitt/personalwebsite" target="_blank" rel="noopener">GitHub</a></li>
-          </ul>
-        </nav>
+{% block title %}Resume — Aarushi Mittal{% endblock %}
+
+{% block description %}Resume of Aarushi Mittal — Education, experience, skills, and focus areas.{% endblock %}
+
+{% block content %}
+<!-- Floating Background Elements -->
+<div class="floating-elements">
+  <div class="floating-shape shape-1"></div>
+  <div class="floating-shape shape-2"></div>
+  <div class="floating-shape shape-3"></div>
+  <div class="floating-shape shape-4"></div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <!-- Resume Header -->
+    <div class="resume-hero">
+      <h1 class="resume-title">Resume</h1>
+      <p class="resume-subtitle">Aarushi Mittal | MSIS + BSIS Student | Data Analytics Professional</p>
+      <div class="resume-buttons">
+        <a class="btn btn-primary" href="{{ url_for('static', filename='files/Resume of Aarushi Mittal.pdf') }}" target="_blank" rel="noopener">View PDF</a>
+        <a class="btn btn-secondary" href="{{ url_for('static', filename='files/Resume of Aarushi Mittal.pdf') }}" download="Resume of Aarushi Mittal.pdf" rel="noopener">Download PDF</a>
       </div>
-    </header>
-
-    <main>
-      <!-- Floating Background Elements -->
-      <div class="floating-elements">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-        <div class="floating-shape shape-4"></div>
-      </div>
-
-      <section class="section">
-        <div class="container">
-          <!-- Resume Header -->
-          <div class="resume-hero">
-            <h1 class="resume-title">Resume</h1>
-            <p class="resume-subtitle">Aarushi Mittal | MSIS + BSIS Student | Data Analytics Professional</p>
-            <div class="resume-buttons">
-              <a class="btn btn-primary" href="files/Resume of Aarushi Mittal.pdf" target="_blank" rel="noopener">View PDF</a>
-              <a class="btn btn-secondary" href="files/Resume of Aarushi Mittal.pdf" download="Resume of Aarushi Mittal.pdf" rel="noopener">Download PDF</a>
-            </div>
-          </div>
+    </div>
 
           <!-- Resume Content Grid -->
           <div class="resume-content">
@@ -292,17 +268,11 @@
             <div class="publication-card">
               <h4>LawFinderLive Article</h4>
               <p>Assisted in research and writing for an article published on LawFinderLive, contributing to legal discourse and analysis.</p>
-              <a class="btn btn-secondary" href="https://www.lawfinderlive.com/Articles-1/Article85.htm?AspxAutoDetectCookieSupport=1" target="_blank" rel="noopener">Read Article</a>
+              <a class="btn btn-secondary" href="https://www.lawfinderlive.com/" target="_blank" rel="noopener">Visit LawFinderLive</a>
             </div>
           </div>
         </div>
       </section>
-    </main>
-
-    <footer class="site-footer" role="contentinfo">
-      <div class="container inner">
-        © 2025 Aarushi Mittal | Indiana University Kelley School of Business.
-      </div>
-    </footer>
-  </body>
-</html>
+    </div>
+  </section>
+{% endblock %}

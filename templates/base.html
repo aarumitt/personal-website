@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Aarushi Mittal{% endblock %}</title>
+    <meta name="description" content="{% block description %}Portfolio of Aarushi Mittal — MSIS + BSIS student at Indiana University Kelley School of Business. Tech consulting, analytics, and digital transformation.{% endblock %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <!-- Accessible site header with consistent navigation across pages -->
+    <header class="site-header">
+      <div class="container nav" role="navigation" aria-label="Primary">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <a href="{{ url_for('home') }}">Aarushi Mittal</a>
+        </div>
+        <nav aria-label="Main Navigation">
+          <ul>
+            <li><a href="{{ url_for('home') }}" {% if request.endpoint == 'home' %}aria-current="page"{% endif %}>Home</a></li>
+            <li><a href="{{ url_for('about') }}" {% if request.endpoint == 'about' %}aria-current="page"{% endif %}>About</a></li>
+            <li><a href="{{ url_for('resume') }}" {% if request.endpoint == 'resume' %}aria-current="page"{% endif %}>Resume</a></li>
+            <li><a href="{{ url_for('projects') }}" {% if request.endpoint == 'projects' %}aria-current="page"{% endif %}>Projects</a></li>
+            <li><a href="{{ url_for('addproject') }}" {% if request.endpoint == 'addproject' %}aria-current="page"{% endif %}>Add Project</a></li>
+            <li><a href="{{ url_for('contact') }}" {% if request.endpoint == 'contact' %}aria-current="page"{% endif %}>Contact</a></li>
+            <li><a href="https://github.com/aarumitt/personalwebsite" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container inner">© 2025 Aarushi Mittal | Indiana University Kelley School of Business.</div>
+    </footer>
+    
+    {% block scripts %}{% endblock %}
+  </body>
+</html>
